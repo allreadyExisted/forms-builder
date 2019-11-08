@@ -6,6 +6,7 @@ import { FormTransformers } from './form-transformers'
 import { FieldName, FieldsList, Form, FieldErrors, ValidationResult, InternalForm } from './form'
 import { useChildForm, PrimitiveFormFields, removeFieldItem, addFieldItem } from './child'
 import { memoField } from './memo-field'
+import ProxyPolyfill from 'proxy-polyfill/src/proxy'
 
 export {
   Field,
@@ -179,7 +180,7 @@ export function useForm<
       forceUpdate()
     }
 
-    const proxy: Fields<T> = new Proxy(_fields, {
+    const proxy: Fields<T> = new ProxyPolyfill(_fields, {
       get(target, name: Extract<keyof T, string>) {
         if (!target[name]) {
           target[name] = {

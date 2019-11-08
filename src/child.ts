@@ -1,6 +1,7 @@
 import { Form, InternalForm } from './form'
 import { useEffect, useMemo, useRef, useCallback } from 'react'
 import { Field, InternalField } from './fields'
+import ProxyPolyfill from 'proxy-polyfill/src/proxy'
 
 export interface PrimitiveFormFields<T> {
   index: T
@@ -58,7 +59,7 @@ export function useChildForm<T extends { [key: string]: any } | string>(
   }, [])
 
   const proxy = useMemo(() => {
-    const fields = new Proxy({} as typeof child.fields, {
+    const fields = new ProxyPolyfill({} as typeof child.fields, {
       get(_target, name: Extract<keyof T, string> & 'index') {
         return {
           ...child.fields[name],

@@ -5,10 +5,6 @@
     "target": "es5",
     "downlevelIteration": true
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "./src/__tests__"
-  ]
+  "include": ["./src/**/*", "./typings/**/*"],
+  "exclude": ["./src/__tests__"]
 }
