@@ -1,5 +1,5 @@
 {
-  "name": "@mc-petry/useform",
+  "name": "@already-existed/useform",
   "version": "1.4.0",
   "description": "React form hook",
   "main": "dist/index.js",
@@ -35,16 +35,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mc-petry/useform.git"
+    "url": "git+https://github.com/alreadyExisted/useform.git"
   },
   "keywords": [
     "react",
     "forms"
   ],
-  "author": "mc-petry",
+  "author": "mc-petry alreadyExisted",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mc-petry/useform/issues"
+    "url": "https://github.com/alreadyExisted/useform/issues"
   },
   "homepage": "https://mc-petry.github.io/useform-site/"
 }
